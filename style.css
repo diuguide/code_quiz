@@ -7,6 +7,7 @@
     border-radius: 5px;
     margin-top: 10px;
     padding: 20px 10px 35px 10px;
+    
 }
 #quizbox {
     border : 2px solid #293241;
@@ -21,7 +22,7 @@
     border-radius: 5px;
     padding: 10px;
 }
-#scoreboard {
+#lowerboard {
     border : 2px solid #293241;
     border-radius: 5px;
     margin-top: 10px;
@@ -29,17 +30,12 @@
     
 }
 #start{
-    font-size: 1.5em;
-    font-weight: bolder;
-    word-break: break-all;
+    margin: auto;
     width:100px;
     height:150px;
     border : 2px solid lightgrey;
     text-align: center;
     cursor: pointer;
-    position: absolute;
-    left:300px;
-    top:50px;
     color : lightgrey;
 }
 #start:hover{

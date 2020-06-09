@@ -14,7 +14,7 @@ const lowerBoard = document.getElementById("lowerboard");
 const submitName = document.getElementById("submitname");
 const submitBtn = document.getElementById("submitbtn");
 const highScores = document.getElementById("highscores");
-const resetBtn = document.getElementById("resetbtn");
+const resetBtn = document.getElementById("reset");
 
 let questions = [
   {
@@ -108,7 +108,6 @@ function scoreRender() {
 
 function finalScore() {
   submitScore.style.display = "block";
-  resetBtn.style.display = "block";
   lowerBoard.style.display = "none";
   quizBox.innerHTML = "<h1>GAME OVER! Score: " + score;
   localStorage.setItem('score', score);
@@ -119,5 +118,10 @@ submitBtn.addEventListener('click', function renderHighscores() {
   quizBox.style.display = "none";
   let name = prompt('Please enter your initials');
   localStorage.setItem('name', name);
-  highScores.innerHTML = "<h1>HIGH SCORES</h1><hr><h2>" + localStorage.getItem('name') + ":" + localStorage.getItem('score') + "</h2>";  
+  highScores.innerHTML = "<h1>HIGH SCORES</h1><hr><h2>" + localStorage.getItem('name') + ":" + localStorage.getItem('score') + "</h2>";
+  resetBtn.style.display = "block"
+  resetBtn.addEventListener('click', function myFunction() {
+  location.replace("index.html")
+});  
 });
+
