@@ -9,26 +9,6 @@
     <title>Code Quiz</title>
 </head>
 <body>
-<!--bootstrap code for nav bar with buttons to start, stop, and reset the quiz-->   
-    <nav class="navbar navbar-expand-lg navbar-light bg-light">
-        <a class="navbar-brand" href="#">Code Quiz</a>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-          <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarNav">
-          <ul class="navbar-nav">
-            <li class="nav-item active">
-                <a class="nav-link" id="start" href="#">Start</a>
-            </li>
-            <li class="nav-item active">
-                <a class="nav-link" id="stop" href="#">Stop</a>
-            </li>
-            <li class="nav-item active">
-                <a class="nav-link" id="highscores" href="#">View Highscores</a> 
-            </li>
-          </ul>
-        </div>
-      </nav>
     <main class="main">
         <div class="container">
             
@@ -45,7 +25,7 @@
                     <input type="submit" id="submitbtn" value="Please Submit Your Score">
                 </form>
             </div>
-            <div id="highschores"></div>    
+            <div id="highscores" onclick="renderHighscores()"></div>    
         </div>
         <div class="container" id="lowerboard">
             <div class="counter" id="counter"></div>

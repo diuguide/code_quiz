@@ -107,11 +107,9 @@ function finalScore() {
   counter.style.display = "none";
   lowerBoard.style.display = "none";
   submitScore.style.display = "block";
-  quizBox.innerHTML = "<h1>Your Final Score is: " + score;
-  submitBtn.addEventListener('click', renderHighscore);
+  quizBox.innerHTML = "<h1>Your Final Score is: " + score; 
 }
 
-function renderHighscore() {
-  quizBox.style.display = "none";
-  
+function renderHighscores() {
+  highScores.innerHTML = submitName + ":" + score;
 }
