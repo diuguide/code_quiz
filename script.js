@@ -66,7 +66,7 @@ function renderQuestion() {
 function renderCounter() {
       counter.innerHTML = "Time Remaining: " + count;
       count--;
-      if(count == 0) {
+      if(count <= 0) {
         finalScore();
       }
 }
@@ -97,8 +97,6 @@ function checkAnswer(answer) {
     finalScore();
     clearInterval(clock);
   }
-    
-
 }
 
 function scoreRender() {

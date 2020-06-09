@@ -1,29 +1,32 @@
 * {
     box-sizing: border-box;
+    background-color: #fff5b2;
 }
 .container {
     width: 75%;
     display: block;
-    border-radius: 5px;
     margin-top: 10px;
     padding: 20px 10px 35px 10px;
     
 }
 #quizbox {
-    border : 2px solid #293241;
+    border : 2px solid #362c28;
     border-radius: 5px;
 }
 #question {
+    
     padding: 20px;
 }
 .choice {
+    background-color: #d4fcc3;
     margin: 5px;
-    border : 2px solid #293241;
+    border : 2px solid #362c28;
     border-radius: 5px;
     padding: 10px;
 }
 #lowerboard {
-    border : 2px solid #293241;
+    
+    border : 2px solid #362c28;
     border-radius: 5px;
     margin-top: 10px;
     padding: 35px;
@@ -31,15 +34,24 @@
 }
 #start{
     margin: auto;
+    margin-top: 100px;
     width:100px;
-    height:150px;
-    border : 2px solid lightgrey;
+    height:100px;
+    background-color: #d4fcc3;
+    border-radius: 5px;
+    border : 2px solid #362c28;
     text-align: center;
     cursor: pointer;
-    color : lightgrey;
+    color : #362c28;
 }
-#start:hover{
-    border: 3px solid lightseagreen;
-    color : lightseagreen;
+#submitbtn, #resetbtn {
+    margin-top: 20px;
+    width:200px;
+    height:66px;
+    border-radius: 5px;
+    border : 2px solid #362c28;
+    text-align: center;
+    cursor: pointer;
+    color : #362c28; 
 }
 
