@@ -1,0 +1,30 @@
+* {
+    box-sizing: border-box;
+}
+.container {
+    display: block;
+    border : 2px solid #293241;
+    border-radius: 5px;
+    margin-top: 10px;
+    padding: 20px 10px 35px 10px;
+}
+.quizbox {
+
+}
+#question {
+    padding-bottom: 20px;
+}
+.choice {
+    margin: 5px;
+    border : 2px solid #293241;
+    border-radius: 5px;
+    padding: 10px;
+}
+#scoreboard {
+    border : 2px solid #293241;
+    border-radius: 5px;
+    margin-top: 10px;
+    padding: 35px;
+    
+}
+
