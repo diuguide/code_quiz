@@ -11,8 +11,8 @@
 <body>
     <main class="main">
         <div class="container">
-            
-            <div id="quizbox">
+            <div class="start" id="start"></div>
+            <div id="quizbox" style="display: none;">
                 <div id="question">Welcome to the Code Quiz!</div>
                 <div class="choice" id="A" onClick="checkAnswer('A')">A</div>
                 <div class="choice" id="B" onClick="checkAnswer('B')">B</div>
@@ -20,17 +20,18 @@
                 <div class="choice" id="D" onClick="checkAnswer('D')">C</div>
             </div>
             <div id="submitscore" style="display: none;">
-                <form>
-                    <input type="text" id="submitname">
-                    <input type="submit" id="submitbtn" value="Please Submit Your Score">
-                </form>
+                <input type="button" class="button" id="submitbtn" value="submit highscore">
             </div>
-            <div id="highscores" onclick="renderHighscores()"></div>    
-        </div>
-        <div class="container" id="lowerboard">
-            <div class="counter" id="counter"></div>
-            <div id="scoreboard"></div>
-        </div>
+            <div id="reset" style="display: none;">
+                <input type="button" class="button" id="resetbtn" value="Play Again!">
+            </div>
+            <div id="highscores"></div>    
+        
+            <div id="lowerboard" style="display: none;">
+                <div class="counter" id="counter"></div>
+                <div id="scoreboard"></div>
+            </div>
+        </div>    
     </main>  
      <script src="./script.js"></script>
      <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
