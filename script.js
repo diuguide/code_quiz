@@ -123,7 +123,7 @@ submitBtn.addEventListener("click", function renderHighscores() {
   highScores.innerHTML =
     "<h1>HIGH SCORES</h1><hr><h2>" +
     localStorage.getItem("name") +
-    ":" +
+    "................" +
     localStorage.getItem("score") +
     "</h2>";
   resetBtn.style.display = "block";
