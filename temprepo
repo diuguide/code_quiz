@@ -55,3 +55,21 @@ function renderQuestion() {
 }
 
 renderQuestion();
+
+
+
+highScores.innerHTML =
+    "<h1>HIGH SCORES</h1><hr><h2>" +
+    localStorage.getItem("name") +
+    "................" +
+    localStorage.getItem("score") +
+    "</h2>";
+  resetBtn.style.display = "block";
+  resetBtn.addEventListener("click", function myFunction() {
+    location.replace("index.html");
+
+
+hiScores.map(function (t) {
+    let highscoreEl = document.createElement('p');
+    highscoreEl.innerHTML = t.name + "-" + t.score;
+    highscores.appendChild(highscoreEl);

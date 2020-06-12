@@ -18,6 +18,8 @@ const submitBtn = document.getElementById("submitbtn");
 const highScores = document.getElementById("highscores");
 const resetBtn = document.getElementById("reset");
 const title = document.getElementById("titlebox");
+const mostRecentScore = localStorage.getItem("mostRecentScore");
+
 // create an array of questions //
 
 let questions = [
@@ -124,25 +126,39 @@ function finalScore() {
   submitScore.style.display = "block";
   lowerBoard.style.display = "none";
   quizBox.innerHTML = "<h1>GAME OVER! Score: " + score;
-  localStorage.setItem("score", score);
+  localStorage.setItem("mostRecentScore", score);
 }
 
 // event listener for high score button, prompts user for initials, stores information to local storage, then displays high scores from localstorage //
-
+const hiScores = JSON.parse(localStorage.getItem("highscores")) || []; // initializes an empty high score bracket //
 submitBtn.addEventListener("click", function renderHighscores() {
   event.preventDefault();
   submitScore.style.display = "none";
   quizBox.style.display = "none";
-  let name = prompt("Please enter your initials");
-  localStorage.setItem("name", name);
-  highScores.innerHTML =
-    "<h1>HIGH SCORES</h1><hr><h2>" +
-    localStorage.getItem("name") +
-    "................" +
-    localStorage.getItem("score") +
-    "</h2>";
-  resetBtn.style.display = "block";
-  resetBtn.addEventListener("click", function myFunction() {
-    location.replace("index.html");
+  const mostRecentScore = localStorage.getItem("mostRecentScore");
+  const initials = prompt("Please enter your Name");
+  const recentScore = {
+    score: mostRecentScore,
+    name: initials,
+  };
+  hiScores.push(recentScore);
+  localStorage.setItem("highscores", JSON.stringify(hiScores));
+  console.log(hiScores)
+  highScores.innerHTML = "<h1>HIGH SCORES</h1><hr>";
+  hiScores.map(function (t) {
+    let highscoreEl = document.createElement('p');
+    highscoreEl.innerHTML = t.name + "-" + t.score;
+    highscores.appendChild(highscoreEl);
+    resetBtn.style.display = "block";
+    resetBtn.addEventListener("click", function myFunction() {
+      location.replace("index.html");
+    });
   });
+
 });
+
+
+
+
+
+
