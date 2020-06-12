@@ -135,17 +135,16 @@ submitBtn.addEventListener("click", function renderHighscores() {
   event.preventDefault();
   submitScore.style.display = "none";
   quizBox.style.display = "none";
-  const mostRecentScore = localStorage.getItem("mostRecentScore");
-  const initials = prompt("Please enter your Name");
+  const mostRecentScore = localStorage.getItem("mostRecentScore"); // pulls info to create new local storage //
+  const initials = prompt("Please enter your Name"); //asks for input with new local storage //
   const recentScore = {
     score: mostRecentScore,
     name: initials,
   };
-  hiScores.push(recentScore);
-  localStorage.setItem("highscores", JSON.stringify(hiScores));
-  console.log(hiScores)
+  hiScores.push(recentScore);                               //pushes new information to local storage //
+  localStorage.setItem("highscores", JSON.stringify(hiScores)); // sets new local storage //
   highScores.innerHTML = "<h1>HIGH SCORES</h1><hr>";
-  hiScores.map(function (t) {
+  hiScores.map(function (t) {                                 // prints out stored high scores //
     let highscoreEl = document.createElement('p');
     highscoreEl.innerHTML = t.name + "-" + t.score;
     highscores.appendChild(highscoreEl);
