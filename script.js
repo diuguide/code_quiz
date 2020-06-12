@@ -90,7 +90,7 @@ function renderQuestion() {
 }
 // displays timer, ends game when time is up //
 function renderCounter() {
-  counter.innerHTML = "Time Remaining: " + count;
+  counter.innerHTML = count;
   count--;
   if (count <= 0) {
     finalScore();
@@ -118,7 +118,7 @@ function checkAnswer(answer) {
 
 // renders score board, shows current score //
 function scoreRender() {
-  scoreBoard.style.display = "block";
+  scoreBoard.style.display = "in-line";
   scoreBoard.innerHTML = "CURRENT SCORE: " + score;
 }
 // hides quiz and score board, displays final score and high score submit button //

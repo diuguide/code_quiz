@@ -15,6 +15,9 @@
 #question {
   padding: 20px;
 }
+.choice:hover {
+  background-color: #edff86;
+}
 .choice {
   background-color: #d4fcc3;
   margin: 5px;
@@ -26,7 +29,13 @@
   border: 2px solid #362c28;
   border-radius: 5px;
   margin-top: 10px;
-  padding: 35px;
+  height: 100px;
+  padding: 5px;
+  
+}
+#scoreboard {
+  float: left;
+  font-size: 20px;
 }
 #start {
   margin: auto;
@@ -62,4 +71,8 @@ footer {
 #titlebox {
   padding-top: 15px;
   text-align: center;
+}
+#counter {
+  float: right;
+  font-size: 60px;
 }
