@@ -27,17 +27,17 @@ let questions = [
     question: "Which of these is not a programming language?",
     choiceA: "html",
     choiceB: "javascript",
-    choiceC: "poothon",
+    choiceC: "twitter",
     choiceD: "php",
     correct: "C",
   },
   {
-    question: "Which of the following is a commonly used data type?",
-    choiceA: "bergs",
-    choiceB: "beans",
-    choiceC: "bits",
-    choiceD: "boops",
-    correct: "C",
+    question: "Who was the 14th president of the United States?",
+    choiceA: "Franklin Peirce",
+    choiceB: "George Washington",
+    choiceC: "Abraham Lincoln",
+    choiceD: "Milard Fillmore",
+    correct: "A",
   },
   {
     question:
@@ -55,6 +55,22 @@ let questions = [
     choiceC: "18 yottabytes",
     choiceD: "18 petabytes",
     correct: "B",
+  },
+  {
+    question: "What is the origin of the Python scripting language's name?",
+    choiceA: "the snake python",
+    choiceB: "Monty Python",
+    choiceC: "a combination of pi and marathon",
+    choiceD: "python is not a word",
+    correct: "B",
+  },
+  {
+    question: "Who is the creator of the JavaScript scripting language?",
+    choiceA: "Brendan Eich",
+    choiceB: "Steve Jobs",
+    choiceC: "Javascript is the name of my local coffee shop not a language",
+    choiceD: "It was an open source project started in 1942",
+    correct: "A",
   },
 ];
 // create variable to signal last question //
@@ -93,6 +109,8 @@ function renderCounter() {
   counter.innerHTML = count;
   count--;
   if (count <= 0) {
+    alert("TIME IS UP");
+    clearInterval(clock);
     finalScore();
   }
 }
